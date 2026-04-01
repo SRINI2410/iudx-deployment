@@ -530,6 +530,9 @@ configuration: |-
   {{- end }}
   {{- end }}
   {{- if .Values.tcpListenOptions.enabled }}
+  # Disk Threshold
+  ##
+  disk_free_limit.relative = 1.0
   ## TCP Listen Options
   ##
   tcp_listen_options.backlog = {{ .Values.tcpListenOptions.backlog }}
